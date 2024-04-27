@@ -11,7 +11,7 @@ import java.util.Map;
 @RestController
 @RequestMapping
 public class AiProControlelr {
-
+    int a;
     private final AiProService aiProService;
 
     @Autowired
