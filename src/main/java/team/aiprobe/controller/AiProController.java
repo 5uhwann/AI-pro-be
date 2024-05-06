@@ -10,12 +10,12 @@ import java.util.Map;
 
 @RestController
 @RequestMapping
-public class AiProControlelr {
-    int a;
+@CrossOrigin
+public class AiProController {
     private final AiProService aiProService;
 
     @Autowired
-    public AiProControlelr(AiProService aiProService){
+    public AiProController(AiProService aiProService){
         this.aiProService = aiProService;
     }
 
