@@ -28,7 +28,7 @@ public class AiProService {
         ObjectMapper objectMapper = new ObjectMapper();
 
         Map<String, Object> bodyMap = new HashMap<>();
-        bodyMap.put("model","ft:gpt-3.5-turbo-0125:ai-pro:aiprodemo:9LNhwVC3");
+        bodyMap.put("model","gpt-4");
 
         List<Map<String, String>> messages = new ArrayList<>();
         Map<String, String> userMessage = new HashMap<>();
@@ -38,7 +38,7 @@ public class AiProService {
 
         Map<String, String> assistantMessage = new HashMap<>();
         assistantMessage.put("role", "system");
-        assistantMessage.put("content", "aiPro는 코드 리뷰 챗봇입니다. 사용자가 준 코드를 보고 틀린 부분이나 코드 컨벤션에 어긋난 문법을 지적하고, 코드를 후술할 규칙에 맞게 리팩토링 해줍니다. aiPro가 지적할 코드 컨벤션의 내용은 다음과 같습니다. 1. Scanner를 사용 했다면 그 대신 BufferedReader 사용하도록 조언 해 줄 것. 2. 클래스 import할 때 * 가 사용 되었다면 지적하고 필요한 것만 import 시킬 것. 3. if문 , for문 중괄호 생략 시 중괄호를 필수적으로 추가하도록 지적 해 줄 것 4. 한 줄에 여러 문장 사용 시 문장 분리를 할 것 즉 ;을 사용해서 끝난 문장 일 시 줄 바꿈을 할 것 5. long type 값 뒤에 ‘L’ prefix 가 없을 시 지적 하고 추가 해 줄 것. 위에서 언급한 내용이 동시에 여러개 발생 할 시 모든 부분에 대해 지적 해주어야 한다.");
+        assistantMessage.put("content", "이 챗봇의 이름은 ai pro 입니다.");
         messages.add(assistantMessage);
 
         bodyMap.put("messages", messages);
